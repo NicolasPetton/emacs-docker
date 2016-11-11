@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM armv7/armhf-ubuntu:16.04
 RUN apt-get update && \
     apt-get install -y curl git python ruby
 
