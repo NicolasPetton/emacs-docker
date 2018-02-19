@@ -15,11 +15,27 @@ RUN apt-get install --quiet --assume-yes curl git make python ruby xorg
 RUN curl -fsSkL https://raw.github.com/rejeep/evm/master/go | bash
 ENV PATH /root/.evm/bin:$PATH
 
-# Install Emacs 25.1
+# Install all versions of Emacs available with EVM
 RUN evm config path /tmp
-RUN evm install emacs-25.1-travis --use --skip
+
+RUN evm install emacs-23.4-travis
+RUN evm install emacs-24.1-travis
+RUN evm install emacs-24.2-travis
+RUN evm install emacs-24.3-travis
+RUN evm install emacs-24.4-travis
+RUN evm install emacs-24.5-travis
+RUN evm install emacs-25.1-travis
+RUN evm install emacs-25.2-travis
+RUN evm install emacs-25.3-travis
+RUN evm install emacs-26-pretest-travis
+RUN evm install emacs-git-snapshot-travis
+RUN evm install remacs-git-snapshot-travis
+
+# Activate latest Emacs release
+RUN evm use emacs-25.3-travis
 RUN emacs --version
 
 # Install cask
 RUN curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 ENV PATH /root/.cask/bin:$PATH
+
