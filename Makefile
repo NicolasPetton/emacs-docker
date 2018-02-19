@@ -1,7 +1,9 @@
 PASS_ENTRY=hub.docker.com
 TAG=nicolaspetton/emacs
 
-.PHONY: build run push
+.PHONY: all build run push
+
+all: build
 
 # Pass --no-cache to docker-build to force new build
 build:
