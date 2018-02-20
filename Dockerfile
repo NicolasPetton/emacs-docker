@@ -9,7 +9,7 @@ ENV DEBIAN_FRONTEND noninteractive
 # - curl, git, make: used by many scripts
 # - python: used by Cask
 # - ruby, xorg: used by EVM
-RUN apt-get install --quiet --assume-yes curl git make python ruby xorg
+RUN apt-get install --quiet --assume-yes curl git make python ruby xorg gnutls-bin
 
 # Install evm
 RUN curl -fsSkL https://raw.github.com/rejeep/evm/master/go | bash
