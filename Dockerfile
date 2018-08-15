@@ -27,7 +27,7 @@ RUN evm install emacs-24.5-travis
 RUN evm install emacs-25.1-travis
 RUN evm install emacs-25.2-travis
 RUN evm install emacs-25.3-travis
-RUN evm install emacs-26-pretest-travis
+RUN evm install emacs-26.1-travis
 RUN evm install emacs-git-snapshot-travis
 RUN evm install remacs-git-snapshot-travis
 
