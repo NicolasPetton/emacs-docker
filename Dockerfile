@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:16.04
 
 RUN apt-get update --quiet
 
@@ -9,7 +9,7 @@ ENV DEBIAN_FRONTEND noninteractive
 # - curl, git, make: used by many scripts
 # - python: used by Cask
 # - ruby, xorg: used by EVM
-RUN apt-get install --quiet --assume-yes curl git make python ruby xorg gnutls-bin
+RUN apt-get update && apt-get install --quiet --assume-yes curl git make python ruby xorg texinfo gnutls-bin libgnutls-dev
 
 # Install evm
 RUN curl -fsSkL https://raw.github.com/rejeep/evm/master/go | bash
