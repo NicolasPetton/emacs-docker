@@ -32,7 +32,7 @@ RUN evm install emacs-git-snapshot-travis
 RUN evm install remacs-git-snapshot-travis
 
 # Activate latest Emacs release
-RUN evm use emacs-25.3-travis
+RUN evm use emacs-26.1-travis
 RUN emacs --version
 
 # Install cask
