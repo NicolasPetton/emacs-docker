@@ -1,0 +1,14 @@
+kind: pipeline
+name: default
+
+platform:
+  os: linux
+  arch: arm
+
+steps:
+- name: build
+  image: ubuntu:latest
+  commands:
+  - apt-get update
+  - apt-get install -y coreutils make curl
+  - make build
